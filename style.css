@@ -1,0 +1,22 @@
+/*
+Theme Name			: Vintage
+Theme URI			: https://poralia.com/
+Author				: Poralia Global
+Author URI			: https://poralia.com/
+Description			: Vintage theme for Poralia.
+Version				: 1.0
+Tested up to		: 6.1
+Requires at least	: 3.6
+Requires PHP		: 5.2.4
+Tags				: old, classic, agency
+Text Domain			: vintage
+Tailwind CMD		: npx tailwindcss -i ./css/input.css -o ./css/output.min.css --watch --minify
+*/
+
+body, 
+html { 
+	font-family: 'Inter', sans-serif;
+	min-height: 100%;
+	height: 100%;
+}
+.screen-reader-text { display: none; }
