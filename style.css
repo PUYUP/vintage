@@ -20,3 +20,5 @@ html {
 	height: 100%;
 }
 .screen-reader-text { display: none; }
+.entry-content * + * { margin-top: 15px; }
+.nav-menu .current-menu-item > a { border-bottom: 1px solid; }

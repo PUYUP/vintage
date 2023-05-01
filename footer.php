@@ -8,13 +8,12 @@
  */
 
 ?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
+
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="w-full lg:w-3/5 xl:w-3/6 border-r border-solid border-orange-500">
-			<div class="px-4 py-5">
+		<div class="w-full xl:w-3/6 lg:w-4/6 md:w-4/5 border-r border-solid border-orange-500">
+			<div class="p-4 xl:p-12 lg:p-8 md:p-6">
 				<div class="copyright">
 					<?php
 					printf(
