@@ -43,7 +43,7 @@
 						wp_nav_menu(
 							array(
 								'theme_location' => 'primary',
-								'menu_class'     => 'nav-menu flex items-center gap-4 md:text-base text-sm',
+								'menu_class'     => 'nav-menu flex flex-wrap items-center justify-end gap-3 md:gap-4 md:text-base text-sm leading-4',
 								'menu_id'        => 'primary-menu',
 							)
 						);
