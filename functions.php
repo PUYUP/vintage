@@ -66,40 +66,11 @@ function vintage_scripts_styles() {
 		'nonce' 	=> wp_create_nonce( 'wp_rest' ),
 	) );
 
-	// Add Source Sans Pro and Bitter fonts, used in the main stylesheet.
-	wp_enqueue_style( 'inter-fonts', 'https://rsms.me/inter/inter.css', array(), null );
-
 	// Loads our main stylesheet.
 	wp_enqueue_style( 'output-style', get_template_directory_uri() . '/css/output.min.css', array(), '20221101' );
 	wp_enqueue_style( 'vintage-style', get_stylesheet_uri(), array(), '20221101' );
 }
 add_action( 'wp_enqueue_scripts', 'vintage_scripts_styles' );
-
-/*
- * Add preconnect for Google Fonts.
- *
- * @since Twenty_Press 2.1
- *
- * @param array   $urls          URLs to print for resource hints.
- * @param string  $relation_type The relation type the URLs are printed.
- * @return array URLs to print for resource hints.
- */
-function vintage_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'vintage-style', 'queue' ) && 'preconnect' === $relation_type ) {
-		if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '>=' ) ) {
-			$urls[] = array(
-				'href' => 'https://rsms.me',
-				'crossorigin',
-			);
-		} 
-		else {
-			$urls[] = 'https://rsms.me';
-		}
-	}
-
-	return $urls;
-}
-add_filter( 'wp_resource_hints', 'vintage_resource_hints', 10, 2 );
 
 
 /**

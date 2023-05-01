@@ -15,7 +15,6 @@ Tailwind CMD		: npx tailwindcss -i ./css/input.css -o ./css/output.min.css --wat
 
 body, 
 html { 
-	font-family: 'Inter', sans-serif;
 	min-height: 100%;
 	height: 100%;
 }
