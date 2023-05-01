@@ -16,14 +16,13 @@
 			<div class="p-4 xl:p-12 lg:p-8 md:p-6">
 				<div class="copyright">
 					<?php
-					printf(
-						/* translators: %s: WordPress. */
-						esc_html__( '%1s %2s %3s - %4s', 'vintage' ),
-						'&copy;',
-						date( 'Y' ),
-						get_bloginfo( 'name' ),
-						get_bloginfo( 'description' ),
-					);
+						printf(
+							/* translators: %s: WordPress. */
+							esc_html__( '%1s %2s %3s', 'vintage' ),
+							'&copy;',
+							date( 'Y' ),
+							get_bloginfo( 'name' ),
+						);
 					?>
 				</div><!-- .copyright -->
 			</div>
