@@ -55,6 +55,8 @@ add_action( 'after_setup_theme', 'vintage_setup' );
  * @since Twenty_Press 1.0
  */
 function vintage_scripts_styles() {
+	wp_dequeue_script( 'wp-embed' );
+	
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
