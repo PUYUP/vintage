@@ -56,7 +56,7 @@ add_action( 'after_setup_theme', 'vintage_setup' );
  */
 function vintage_scripts_styles() {
 	wp_dequeue_script( 'wp-embed' );
-	
+
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
@@ -88,6 +88,11 @@ function disable_emojis() {
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
+
+	 if ( ! is_admin() ) {
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', false );
+    }
 }
 add_action( 'init', 'disable_emojis' );
 
