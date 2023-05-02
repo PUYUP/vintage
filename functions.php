@@ -127,3 +127,22 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 
 	return $urls;
 }
+
+
+/**
+ * Add google analytics
+ */
+function add_googleanalytics() { ?>
+	<?php if ( ! is_preview() && ! is_admin() && ! is_user_logged_in() ) : ?>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V52XVZ2W4"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-7V52XVZ2W4');
+		</script>
+	<?php endif; ?>
+<?php }
+add_action('wp_footer', 'add_googleanalytics');
