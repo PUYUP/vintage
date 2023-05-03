@@ -22,4 +22,6 @@ html {
 .nav-menu .current-menu-item > a { border-bottom: 1px solid; }
 .entry-content *:not(li) + *:not(li) { margin-top: 15px; }
 .entry-content ul { padding-left: 15px; }
-.entry-content ul > li { list-style: square; }
+.entry-content ul > li { list-style: inside; }
+.entry-content ol { padding-left: 15px; }
+.entry-content ol > li { list-style: inside decimal; }
