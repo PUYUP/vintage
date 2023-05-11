@@ -11,12 +11,14 @@ Requires PHP		: 5.2.4
 Tags				: old, classic, agency
 Text Domain			: vintage
 Tailwind CMD		: npx tailwindcss -i ./css/input.css -o ./css/output.min.css --watch --minify
+Refference			: https://arthurpemberton.com/
 */
 
 body, 
 html { 
 	min-height: 100%;
 	height: 100%;
+	background-color: #222222;
 }
 .screen-reader-text, .nocomments { display: none; }
 .nav-menu .current-menu-item > a { border-bottom: 1px solid; }

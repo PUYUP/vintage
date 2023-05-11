@@ -20,7 +20,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site flex flex-col h-full items-stretch">
 	<div id="content" class="grow">
-		<div class="w-full h-full xl:w-3/6 lg:w-4/6 md:w-4/5 border-r border-solid border-neutral-400">
+		<div class="w-full h-full xl:w-3/6 lg:w-4/6 md:w-4/5 mx-auto bg-white">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vintage' ); ?></a>
 
 			<div class="site-info p-4 xl:p-12 lg:p-8 md:p-6 flex items-center">

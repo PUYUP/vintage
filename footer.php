@@ -12,8 +12,8 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer mt-auto flex-none">
-		<div class="w-full xl:w-3/6 lg:w-4/6 md:w-4/5 border-r border-solid border-[#e88e5c]">
-			<div class="p-4 xl:p-12 lg:p-8 md:p-6">
+		<div class="w-full xl:w-3/6 lg:w-4/6 md:w-4/5 mx-auto bg-[#e88e5c] text-white text-sm">
+			<div class="px-4 py-2 xl:px-12 xl:py-2 lg:px-8 lg:py-2 md:px-6 md:py-2">
 				<div class="copyright">
 					<?php
 						printf(
