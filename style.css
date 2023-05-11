@@ -27,3 +27,14 @@ html {
 .entry-content ul > li { list-style: inside; }
 .entry-content ol { padding-left: 15px; }
 .entry-content ol > li { list-style: inside decimal; }
+
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 10px;
+}
