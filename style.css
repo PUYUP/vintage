@@ -28,6 +28,15 @@ html {
 .entry-content ol { padding-left: 15px; }
 .entry-content ol > li { list-style: inside decimal; }
 
+.post-list .entry-item:first-child {
+	border-top: 0 !important;
+}
+
+.post-list .entry-item + .entry-item {
+	margin-top: 15px;
+	padding-top: 15px;
+}
+
 table {
 	table-layout: fixed;
 	width: 100%;

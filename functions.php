@@ -146,3 +146,36 @@ function add_googleanalytics() { ?>
 	<?php endif; ?>
 <?php }
 add_action('wp_footer', 'add_googleanalytics');
+
+
+if ( ! function_exists( 'paging_nav' ) ) :
+	/**
+	 * Display navigation to next/previous set of posts when applicable.
+	 *
+	 * @since Twenty_Press 1.0
+	 */
+	function paging_nav() {
+		global $wp_query;
+
+		// Don't print empty markup if there's only one page.
+		if ( $wp_query->max_num_pages < 2 ) {
+			return;
+		}
+		?>
+		<nav class="navigation paging-navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'vintage' ); ?></h1>
+		<div class="nav-links grid grid-cols-2 gap-2 justify-between">
+
+			<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="flex items-center"><span class="meta-nav flex items-center justify-center pb-1">&larr;</span> <span>Older posts</span></span>', 'twentypress' ) ); ?></div>
+			<?php endif; ?>
+
+			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-next flex justify-end"><?php previous_posts_link( __( '<span class="flex items-center"><span>Newer posts</span> <span class="meta-nav flex items-center justify-center pb-1">&rarr;</span></span>', 'twentypress' ) ); ?></div>
+			<?php endif; ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+		<?php
+	}
+endif;
