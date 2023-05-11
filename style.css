@@ -38,3 +38,58 @@ table, th, td {
   border-collapse: collapse;
   padding: 5px 10px;
 }
+
+/**
+ * .aligncenter
+ */
+.aligncenter {
+	clear: both;
+	display: block;
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+/**
+ * .alignright
+ */
+.alignright {
+	margin-top: 0;
+	margin-bottom: var(--global--spacing-vertical);
+}
+
+@media only screen and (min-width: 482px) {
+
+	.alignright {
+
+		/*rtl:ignore*/
+		float: right;
+
+		/*rtl:ignore*/
+		margin-left: var(--global--spacing-horizontal);
+	}
+
+	.entry-content > .alignright {
+		max-width: calc(50% - var(--responsive--alignright-margin));
+	}
+}
+
+[class*=inner-container] > .alignleft + *,
+[class*=inner-container] > .alignright + * {
+	margin-top: 0;
+}
+
+/**
+ * .alignwide
+ */
+.alignwide {
+	clear: both;
+}
+
+/**
+ * .alignfull
+ */
+.alignfull {
+	clear: both;
+}
