@@ -14,16 +14,18 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="post-list" class="site-content post-list pb-6 px-4 xl:px-12 lg:px-8 md:px-6" role="main">
+		<div id="post-list" class="site-content pb-6 px-4 xl:px-12 lg:px-8 md:px-6 flex flex-col min-h-full" role="main">
 		<?php if ( have_posts() ) : ?>
 
-			<?php
-			// Start the loop.
-			while ( have_posts() ) :
-				the_post();
-				?>
-				<?php get_template_part( 'content', 'item' ); ?>
-			<?php endwhile; ?>
+			<div class="post-list">
+				<?php
+				// Start the loop.
+				while ( have_posts() ) :
+					the_post();
+					?>
+					<?php get_template_part( 'content', 'item' ); ?>
+				<?php endwhile; ?>
+			</div>
 
 			<?php paging_nav(); ?>
 

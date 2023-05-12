@@ -162,20 +162,22 @@ if ( ! function_exists( 'paging_nav' ) ) :
 			return;
 		}
 		?>
-		<nav class="navigation paging-navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'vintage' ); ?></h1>
-		<div class="nav-links grid grid-cols-2 gap-2 justify-between">
+		<nav class="navigation paging-navigation mt-12">
+			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'vintage' ); ?></h1>
+			<div class="nav-links grid grid-cols-2 gap-2 justify-between">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="flex items-center"><span class="meta-nav flex items-center justify-center pb-1">&larr;</span> <span>Older posts</span></span>', 'twentypress' ) ); ?></div>
-			<?php endif; ?>
+				<?php if ( get_next_posts_link() ) : ?>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="flex items-center"><span class="meta-nav flex items-center justify-center">&larr;</span> <span>Older posts</span></span>', 'twentypress' ) ); ?></div>
+				<?php endif; ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next flex justify-end"><?php previous_posts_link( __( '<span class="flex items-center"><span>Newer posts</span> <span class="meta-nav flex items-center justify-center pb-1">&rarr;</span></span>', 'twentypress' ) ); ?></div>
-			<?php endif; ?>
+				<?php if ( get_previous_posts_link() ) : ?>
+				<div class="nav-next flex justify-end">
+					<?php previous_posts_link( __( '<span class="flex items-center"><span>Newer posts</span> <span class="meta-nav flex items-center justify-center">&rarr;</span></span>', 'twentypress' ) ); ?>
+				</div>
+				<?php endif; ?>
 
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
+			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
 		<?php
 	}
 endif;
