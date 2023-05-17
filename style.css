@@ -44,7 +44,12 @@ table {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
-  padding: 5px 10px;
+  padding: 10px 10px;
+}
+
+table th {
+	line-height: 1.2;
+	background-color: #fff3ed;
 }
 
 /**
