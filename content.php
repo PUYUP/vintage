@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'flex pb-6 px-4 xl:px-12 lg:px-8 md:px-6' ); ?>>
 	<div class="w-full">
 		<header class="entry-header mb-4">
-			<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() ) : ?>
+			<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() && ! is_front_page() ) : ?>
 			<div class="entry-thumbnail">
 				<?php the_post_thumbnail(); ?>
 			</div>
