@@ -37,6 +37,7 @@ table, th, td {
 
 table th {
 	line-height: 1.2;
+	background-color: #eeeeee;
 }
 
 /**
