@@ -61,6 +61,9 @@ function vintage_scripts_styles() {
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
 
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'poralia-fonts', poralia_fonts_url(), array(), null );
+
 	// Loads JavaScript file with functionality specific to Twenty_Press.
 	wp_enqueue_script( 'vintage-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20210122', true );
 	wp_localize_script( 'vintage-script', 'VINTAGE', array(
@@ -128,6 +131,64 @@ function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	return $urls;
 }
 
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Poralia 1.6
+ *
+ * @param array  $urls          URLs to print for resource hints.
+ * @param string $relation_type The relation type the URLs are printed.
+ * @return array URLs to print for resource hints.
+ */
+function poralia_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'poralia-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'poralia_resource_hints', 10, 2 );
+
+if ( ! function_exists( 'poralia_fonts_url' ) ) :
+	/**
+	 * Register Google fonts for Poralia.
+	 *
+	 * Create your own poralia_fonts_url() function to override in a child theme.
+	 *
+	 * @since Poralia 1.0
+	 *
+	 * @return string Google fonts URL for the theme.
+	 */
+	function poralia_fonts_url() {
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin,latin-ext';
+
+		/*
+		 * translators: If there are characters in your language that are not supported
+		 * by Inter, translate this to 'off'. Do not translate into your own language.
+		 */
+		if ( 'off' !== _x( 'on', 'Inter font: on or off', 'poralia' ) ) {
+			$fonts[] = 'Inter:300,400,500,600,700';
+		}
+
+		if ( $fonts ) {
+			$fonts_url = add_query_arg(
+				array(
+					'family'  => urlencode( implode( '|', $fonts ) ),
+					'subset'  => urlencode( $subsets ),
+					'display' => urlencode( 'fallback' ),
+				),
+				'https://fonts.googleapis.com/css'
+			);
+		}
+
+		return $fonts_url;
+	}
+endif;
 
 /**
  * Add google analytics
