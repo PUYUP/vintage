@@ -26,7 +26,7 @@
 			<div class="site-info p-4 xl:p-12 lg:p-8 md:p-6 flex items-center">
 				<div class="site-name">
 					<?php if ( has_custom_logo() ) : ?>
-						<div class="site-logo w-28 md:w-32 lg:w-48"><?php the_custom_logo(); ?></div>
+						<div class="site-logo w-22 md:w-32 lg:w-32"><?php the_custom_logo(); ?></div>
 					<?php else : ?>
 						<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
 							<?php if ( is_front_page() && ! is_paged() ) : ?>
