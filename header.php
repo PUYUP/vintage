@@ -23,8 +23,8 @@
 		<div class="w-full h-full xl:w-3/6 lg:w-4/6 md:w-4/5 mx-auto bg-white">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vintage' ); ?></a>
 
-			<div class="site-info p-4 xl:p-12 lg:p-8 md:p-6 flex items-center">
-				<div class="site-name">
+			<div class="site-info p-4 xl:p-12 lg:p-8 md:p-6">
+				<div class="site-name text-7xl md:text-9xl font-black leading-[1] -ml-1">
 					<?php if ( has_custom_logo() ) : ?>
 						<div class="site-logo w-20 md:w-28 lg:w-28"><?php the_custom_logo(); ?></div>
 					<?php else : ?>
@@ -37,13 +37,13 @@
 						<?php endif; ?>
 					<?php endif; ?>
 				</div><!-- .site-name -->
-
-				<div class="ml-auto">
+			
+				<div class="block">
 					<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'primary',
-								'menu_class'     => 'nav-menu flex flex-wrap items-center justify-end gap-3 md:gap-4 md:text-base text-sm leading-4',
+								'menu_class'     => 'nav-menu mt-4 flex flex-wrap items-center gap-3 md:gap-4 md:text-base text-sm leading-4',
 								'menu_id'        => 'primary-menu',
 							)
 						);
