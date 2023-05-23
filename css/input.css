@@ -10,7 +10,16 @@ html {
 	color: #232323;
 }
 .screen-reader-text, .nocomments { display: none; }
-.nav-menu .current-menu-item > a { border-bottom: 1px solid; }
+.nav-menu a {
+	text-decoration: underline;
+	text-decoration-color: #e88e5c;
+	text-decoration-style: solid;
+	text-decoration-thickness: 1px;
+}
+.nav-menu .current-menu-item > a { 
+	text-decoration-style: double;
+	text-decoration-color: #232323;
+}
 .entry-content *:not(li) + *:not(li) { margin-top: 15px; }
 .entry-content ul { padding-left: 15px; }
 .entry-content ul > li { list-style: inside; }
