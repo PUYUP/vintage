@@ -172,7 +172,7 @@ if ( ! function_exists( 'poralia_fonts_url' ) ) :
 		 * by Inter, translate this to 'off'. Do not translate into your own language.
 		 */
 		if ( 'off' !== _x( 'on', 'Inter font: on or off', 'poralia' ) ) {
-			$fonts[] = 'Inter:300,400,500,600,700';
+			$fonts[] = 'Inter:500,600,700,900';
 		}
 
 		if ( $fonts ) {
