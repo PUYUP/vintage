@@ -62,7 +62,7 @@ function vintage_scripts_styles() {
 	wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
 
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'poralia-fonts', poralia_fonts_url(), array(), null );
+	// wp_enqueue_style( 'poralia-fonts', poralia_fonts_url(), array(), null );
 
 	// Loads JavaScript file with functionality specific to Twenty_Press.
 	wp_enqueue_script( 'vintage-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20210122', true );
@@ -72,6 +72,7 @@ function vintage_scripts_styles() {
 	) );
 
 	// Loads our main stylesheet.
+	wp_enqueue_style( 'font-family-style', 'https://rsms.me/inter/inter.css', array(), '20221101' );
 	wp_enqueue_style( 'output-style', get_template_directory_uri() . '/css/output.min.css', array(), '20221101' );
 	wp_enqueue_style( 'vintage-style', get_stylesheet_uri(), array(), '20221101' );
 }
@@ -144,6 +145,11 @@ function poralia_resource_hints( $urls, $relation_type ) {
 	if ( wp_style_is( 'poralia-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+
+		$urls[] = array(
+			'href' => 'https://rsms.me',
 			'crossorigin',
 		);
 	}
