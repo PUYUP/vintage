@@ -23,14 +23,14 @@ get_header(); ?>
 				?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header mb-4 pt-2 border-b border-t border-solid border-neutral-400 flex justify-end">	
+					<header class="entry-header mb-4 pt-1 border-b border-t border-solid border-neutral-400 flex justify-end">	
 						<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_front_page() && ! is_home() ) : ?>
 						<div class="entry-thumbnail">
 							<?php the_post_thumbnail(); ?>
 						</div>
 						<?php endif; ?>
 
-						<h1 class="entry-title italic text-lg md:text-2xl !font-light text-end pb-2 -mb-[1px] inline-block border-b border-solid border-[#e88e5c]">
+						<h1 class="entry-title italic text-lg md:text-2xl !font-light text-end pb-1 -mb-[1px] inline-block border-b border-solid border-[#e88e5c]">
 							<?php the_title(); ?>
 						</h1>
 					</header><!-- .entry-header -->
