@@ -11,27 +11,34 @@
  *
  */
 
+$page_for_posts = get_option( 'page_for_posts' );
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<div id="post-list" class="site-content pb-6 px-4 xl:px-12 lg:px-8 md:px-6 flex flex-col min-h-full" role="main">
-		<?php if ( have_posts() ) : ?>
+			<header class="entry-header mb-4 border-b border-solid border-neutral-400 flex justify-end">	
+				<h1 class="entry-title text-lg md:text-xl !font-light text-end pb-2 -mb-[1px] inline-block border-b border-solid border-[#e88e5c]">
+					<?php echo get_the_title( $page_for_posts ); ?>
+				</h1>
+			</header><!-- .entry-header -->
 
-			<div class="post-list">
-				<?php
-				// Start the loop.
-				while ( have_posts() ) :
-					the_post();
-					?>
-					<?php get_template_part( 'content', 'item' ); ?>
-				<?php endwhile; ?>
-			</div>
+			<?php if ( have_posts() ) : ?>
 
-			<?php paging_nav(); ?>
+				<div class="post-list">
+					<?php
+					// Start the loop.
+					while ( have_posts() ) :
+						the_post();
+						?>
+						<?php get_template_part( 'content', 'item' ); ?>
+					<?php endwhile; ?>
+				</div>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+				<?php paging_nav(); ?>
+
+			<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); ?>
+			<?php endif; ?>
 
 		</div><!-- #post-list -->
 	</div><!-- #primary -->
