@@ -17,7 +17,6 @@ html {
 	text-decoration-thickness: 1px;
 }
 .nav-menu .current-menu-item > a { 
-	text-decoration-style: double;
 	text-decoration-color: #232323;
 }
 .entry-content *:not(li) + *:not(li) { margin-top: 15px; }
