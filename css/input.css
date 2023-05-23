@@ -12,12 +12,12 @@ html {
 .screen-reader-text, .nocomments { display: none; }
 .nav-menu a {
 	text-decoration: underline;
-	text-decoration-color: #e88e5c;
+	text-decoration-color: white;
 	text-decoration-style: solid;
 	text-decoration-thickness: 1px;
 }
 .nav-menu .current-menu-item > a { 
-	text-decoration-color: #232323;
+	text-decoration-color: #e88e5c;
 }
 .entry-content *:not(li) + *:not(li) { margin-top: 15px; }
 .entry-content ul { padding-left: 15px; }
