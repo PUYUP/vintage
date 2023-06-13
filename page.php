@@ -30,7 +30,7 @@ get_header(); ?>
 						</div>
 						<?php endif; ?>
 
-						<h1 class="entry-title italic text-lg md:text-2xl !font-light text-end pb-1 -mb-[1px] inline-block border-b border-solid border-[#e88e5c]">
+						<h1 class="entry-title italic text-lg md:text-2xl !font-light text-end pb-1 -mb-[1px] inline-block border-b border-solid border-[#FFA226]">
 							<?php the_title(); ?>
 						</h1>
 					</header><!-- .entry-header -->

@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="post-list" class="site-content pb-6 px-4 xl:px-12 lg:px-8 md:px-6 flex flex-col min-h-full" role="main">
 			<header class="entry-header mb-4 pt-1 border-b border-t border-solid border-neutral-400 flex justify-end">	
-				<h1 class="entry-title italic text-lg md:text-2xl !font-light text-end pb-1 -mb-[1px] inline-block border-b border-solid border-[#e88e5c]">
+				<h1 class="entry-title italic text-lg md:text-2xl !font-light text-end pb-1 -mb-[1px] inline-block border-b border-solid border-[#FFA226]">
 					<?php echo get_the_title( $page_for_posts ); ?>
 				</h1>
 			</header><!-- .entry-header -->
