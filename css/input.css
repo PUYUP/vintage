@@ -17,7 +17,7 @@ html {
 	text-decoration-thickness: 1px;
 }
 .nav-menu .current-menu-item > a { 
-	text-decoration-color: #e88e5c;
+	text-decoration-color: #FFA226;
 }
 .entry-content *:not(li) + *:not(li) { margin-top: 15px; }
 .entry-content ul { padding-left: 15px; }
