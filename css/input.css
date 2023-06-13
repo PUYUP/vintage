@@ -19,6 +19,9 @@ html {
 .nav-menu .current-menu-item > a { 
 	text-decoration-color: #FFA226;
 }
+.site-name {
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 .entry-content *:not(li) + *:not(li) { margin-top: 15px; }
 .entry-content ul { padding-left: 15px; }
 .entry-content ul > li { list-style: inside; }
